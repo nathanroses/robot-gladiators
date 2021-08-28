@@ -8,11 +8,21 @@ function fight() {
 
  var playerName = window.prompt("What is your robot's name?")
 
-//this displays inputed "player name"
+//this logs the inputed "player name"
 
- window.alert(playerName);
+ console.log(playerName);
 
+//main
+  
+  console.log("This logs a string, good for leaving yourself a message");
 
+  //this will do math and log 20
+  
+  console.log(10 + 10);
+
+  //what is this 
+
+  console.log("Our robot's name is " + playerName);
 
 
 
