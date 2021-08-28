@@ -9,11 +9,15 @@ var playerMoney = 10;
 
 console.log(playerName, playerHealth, playerAttack); 
 
-var enemyNames = ["Kai", "Amy Android", "Robo Trumble"];
+var enemyNames = ["Kai", "Amy Android", "Robo Trumble"]; console.log(enemyNames);
 var enemyHealth = "50";
 var enemyAttack =  "12";
 
-console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+console.log(enemyNames.length);
+
 
 var fight = function() {
   
