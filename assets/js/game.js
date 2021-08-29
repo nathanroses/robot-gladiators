@@ -20,13 +20,16 @@ console.log(enemyNames[0]);
 console.log(enemyNames[3]);
 console.log(enemyNames.length);
 
-
-
-
-var fight = function(enemyName) {
-  
     //Alert player that they are starting the round
-    window.alert("Welcome to Robot Gladiators!");
+   // window.alert("Welcome to Robot Gladiators!");
+
+   
+   
+   var fight = function(enemyName) {
+  
+    //Repeat and Excute as Long as Enemy Robot is Alive
+    while(enemyHealth > 0) {
+    
     
     //Alert Fight OR Skip Battle
     var promptFight = window.prompt("Would you like to FIGHT ot SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -37,16 +40,16 @@ var fight = function(enemyName) {
           enemyHealth = enemyHealth - playerAttack;
         //LOG RESULTING MESSAGE ON REMAING HEALTH
           console.log(
-           playerName + " attacked " + enemyNames + " . " + enemyNames + " now has " + enemyHealth + " health remaining. "
+           playerName + " attacked " + enemyName + " . " + enemyName + " now has " + enemyHealth + " health remaining. "
     );
   
      //Check enemy's health
      if (enemyHealth <= 0) {
-         window.alert(enemyNames + " has DIED! " );
+         window.alert(enemyName + " has DIED! " );
      }   
      
      else {
-         window.alert(enemyNames + " stil has " +  enemyHealth  + "  health left. ");
+         window.alert(enemyName + " stil has " +  enemyHealth  + "  health left. ");
      }
 
    
@@ -55,7 +58,7 @@ var fight = function(enemyName) {
      playerHealth = playerHealth - enemyHealth;
    //Log a resulting message to the console so we know that it worked
       console.log(
-         enemyNames + " attacked " +  playerName  + " . " + playerName + " now has " +  playerHealth + " health remaining. "
+         enemyName + " attacked " +  playerName  + " . " + playerName + " now has " +  playerHealth + " health remaining. "
    );
   
   //Check Players Health
@@ -92,7 +95,7 @@ var fight = function(enemyName) {
 }    
 
 
-
+}
 
 };
   
