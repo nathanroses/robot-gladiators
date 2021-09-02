@@ -14,10 +14,6 @@ var enemyAttack =  12;
 
 //START CONSOLE
 
-console.log(enemyNames);
-console.log(enemyNames[0]);
-console.log(enemyNames[3]);
-console.log(enemyNames.length);
 
 //END OF CONSOLE
 
@@ -139,19 +135,18 @@ var endGame = function() {
  // if player is alive player WIN
  if (playerHealth > 0) {
    window.alert("Great Job, you've survived the game! You now have a score of " + playerMoney +".")
- }
- else {
+ } else {
    window.alert("You've lost your robot in battle.");
  }
 
 //ASK TOP PLAY AGAIN
- var playAgainConfirm = window.confirm("Would you like to play again?");
+ var playAgainConfirm = window.confirm('Would you like to play again?');
 
-if (playAgainConfirm) {
+ if (playAgainConfirm) {
   startGame();
-} else {
-  window.alert("Thank you so much for playing Robot Gladiators! Come Back SOON!");
-}
+ } else {
+  window.alert('Thank you so much for playing Robot Gladiators! Come Back SOON!');
+   }
 };
 
 //start when pages reloads
