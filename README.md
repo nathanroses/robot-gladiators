@@ -1,3 +1,3 @@
 # robot-gladiators
 
-yes sir
+# created by nathan rose
