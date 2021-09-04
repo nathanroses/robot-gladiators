@@ -14,14 +14,13 @@ var enemyAttack =  12;
 
 //START CONSOLE
 
-//print 3.1419
-console.log(Math.PI);
 
-// rounds to th neartest whole 4
-console.log(Math.round(4.4));
+  //FUNCTION TO GENERATER RANDOM NUMBER VALUES
+    var randomNumber = function(min, max) {
+      var value = Math.floor(Math.random() * (max - min + 1) + min);
 
-//prints the square root of 5
-console.log(Math.sqrt(25));
+      return value;
+    };
 
 //END OF CONSOLE
 
@@ -52,8 +51,11 @@ var fight = function(enemyName) {
     }
 
  //REMOVE ENEMY HEALTH BY SUBTRACTING THE AMOUNT SET IN THE PLAYER ATTACK
-     enemyHealth = Math.max(0, enemyHealth - playerAttack);
-  console.log(
+    var damage = randomNumber(playerAttack - 3, playerAttack);
+   enemyHealth = Math.max(0, enemyHealth - damage);
+ 
+ 
+ console.log(
     playerName + 'attacked' + enemyName + '.' + enemyName + 'now has' + enemyHealth + 'health remaning.'
   );
 
@@ -73,7 +75,9 @@ var fight = function(enemyName) {
 
  
 //REMOVE PLAYER HEALTH BY SUBTRACTING THE AMOUNT SET IN THE ENEMYATTACk
-    playerHealth = Math.max(0, playerHealth - enemyAttack);
+    var damage = randomNumber(enemyAttack - 3, enemyAttack);
+    playerHealth = Math.max(0, playerHealth - damage);
+
 console.log(
   enemyName + 'attacked' + playerName + '.' + playerName + 'now has' + playerHealth + 'health remaning.'
 );
@@ -119,7 +123,7 @@ var startGame = function () {
    var pickedEnemyName = enemyNames[i];
 
   //RESET ENEMYHEALTH BEFORE NEW FIGHT
-  enemyHealth = Math.floor(Math.random() * 21) + 40;
+  enemyHealth = randomNumber(40, 60);
 
           
   //DEBUGGER
@@ -225,9 +229,9 @@ var endGame = function() {
  
 
   };
- 
 
 
 
 //start when pages reloads
 startGame ();
+
