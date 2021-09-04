@@ -14,6 +14,14 @@ var enemyAttack =  12;
 
 //START CONSOLE
 
+//print 3.1419
+console.log(Math.PI);
+
+// rounds to th neartest whole 4
+console.log(Math.round(4.4));
+
+//prints the square root of 5
+console.log(Math.sqrt(25));
 
 //END OF CONSOLE
 
@@ -37,14 +45,14 @@ var fight = function(enemyName) {
         window.alert(playerName + 'has decoded to skip this fight. GOODBYE!');
 
         //subtract money from Player Money for Skipping
-        playerMoney = playerMoney - 10;
+        playerMoney = Math.max;(0, playerMoney - 10);
         console.log("playerMoney", playerMoney)
         break;
       }
     }
 
  //REMOVE ENEMY HEALTH BY SUBTRACTING THE AMOUNT SET IN THE PLAYER ATTACK
-     enemyHealth = enemyHealth - playerAttack;
+     enemyHealth = Math.max(0, enemyHealth - playerAttack);
   console.log(
     playerName + 'attacked' + enemyName + '.' + enemyName + 'now has' + enemyHealth + 'health remaning.'
   );
@@ -65,7 +73,7 @@ var fight = function(enemyName) {
 
  
 //REMOVE PLAYER HEALTH BY SUBTRACTING THE AMOUNT SET IN THE ENEMYATTACk
-playerHealth = playerHealth - enemyAttack;
+    playerHealth = Math.max(0, playerHealth - enemyAttack);
 console.log(
   enemyName + 'attacked' + playerName + '.' + playerName + 'now has' + playerHealth + 'health remaning.'
 );
@@ -111,7 +119,7 @@ var startGame = function () {
    var pickedEnemyName = enemyNames[i];
 
   //RESET ENEMYHEALTH BEFORE NEW FIGHT
-  enemyHealth = 50;
+  enemyHealth = Math.floor(Math.random() * 21) + 40;
 
           
   //DEBUGGER
@@ -217,7 +225,7 @@ var endGame = function() {
  
 
   };
-
+ 
 
 
 
