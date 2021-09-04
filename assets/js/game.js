@@ -6,14 +6,26 @@ var playerInfo = {
     money: 10
   };
 
-var enemyNames = [' Kai ', 'Amy Android', 'Robo Trumble']; 
-var enemyHealth = 50;
-var enemyAttack =  12;
+ var enemyInfo = [
+   {
+     name: "Roborto",
+     attack: 12
+   },
+   {
+     name: "Amy Android",
+     attack: 13
+   },
+   {
+     name: "Mana Motherboard",
+     attack: 14
+   }
+ ]
 
 //END OF VALUES
 
 //START CONSOLE
-
+  
+  
 
   //FUNCTION TO GENERATER RANDOM NUMBER VALUES
     var randomNumber = function(min, max) {
@@ -25,8 +37,10 @@ var enemyAttack =  12;
 //END OF CONSOLE
 
 //FIGHT GAME
-var fight = function(enemyName) {
-  while (playerInfo.health > 0 && enemyHealth > 0) {
+var fight = function(enemy) {
+       console.log(enemy);
+            
+        while (playerInfo.health > 0 && enemyHealth > 0) {
    
 
     //ask player if they'd like to run or fight
@@ -112,7 +126,7 @@ var startGame = function () {
       playerAttack = 10; 
       playerMoney = 10; 
 
-  for (var i = 0; i < enemyNames.length; i++) {
+  for (var i = 0; i < enemyInfo.length; i++) {
  
     if (playerHealth > 0) {
 
@@ -120,15 +134,15 @@ var startGame = function () {
     window.alert('Welcome to Robot Glaudators! Round ' + (i + 1));
 
   //Pick NEW ENEMY TO FIGHT BASED ON INDEX
-   var pickedEnemyName = enemyNames[i];
+   var pickedEnemyObj = enemyInfo[i];
 
   //RESET ENEMYHEALTH BEFORE NEW FIGHT
-  enemyHealth = randomNumber(40, 60);
+   pickedEnemyObj.health = randomNumber(40, 60);
 
           
   //DEBUGGER
 
-  fight(pickedEnemyName);
+  fight(pickedEnemyObj);
 
   
   // IF WERE NOT THE LAST ENEMY IN THE ARRAY
