@@ -223,5 +223,5 @@ console.log(enemyInfo[0]['attack']);
 
 /* END GAME INFORMATION / VARIABLES */
 
-/* RUN GAME */
+/* RUN GAMES */
 startGame();
